@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant using flexBox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Russo One', sans-serif;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+        }
+
+        #navbar {
+            background-color: black;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            margin: 10px 40px;
+            padding: 5px 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .left img {
+            width: 40px;
+            filter: invert(100%);
+        }
+
+        .logo {
+            margin-top: 5px;
+        }
+
+        .mid {
+            flex-grow: 2;
+            /* border: 2px solid yellow; */
+            margin: 10px 10px;
+            padding: 10px 5px;
+            text-align: center;
+        }
+
+        .mid li {
+            padding: 7px 10px;
+            display: inline;
+            margin: 0px 30px;
+        }
+
+        .mid li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mid li:hover {
+            background-color: rgb(63, 63, 63);
+            /* text-decoration: underline; */
+            color: aliceblue;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+
+
+        .right {
+            /* border: 2px solid green; */
+            margin: 10px 10px;
+            padding: 5px 5px;
+        }
+
+        .btn {
+            font-family: 'Russo One', sans-serif;
+            border: 2px solid grey;
+            border-radius: 10px;
+            background-color: black;
+            padding: 5px 10px;
+            font-size: 13px;
+            margin: 10px 10px;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: rgb(91, 91, 91);
+            cursor: pointer;
+        }
+
+
+        #header {
+            /* border: 2px solid blue; */
+            background: url('https://vip-go.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_359492192.jpg?w=750');
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .header-left h1 {
+            margin-top: 33%;
+        }
+
+        .header-right img {
+            padding: 5% 0%;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 2% 0%;
+        }
+
+        .features {
+            text-align: center;
+            margin: 50px 70px;
+            color: black;
+            transition: all 0.5s ease;
+        }
+
+        .features img {
+            width: 40%;
+        }
+
+        .features:hover {
+            box-shadow: 6px 5px 10px rgb(141, 141, 141);
+            border-radius: 35px;
+        }
+
+        #feature1,
+        #feature2,
+        #feature3 {
+            position: relative;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div class="left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlU9e5yYzpibnyje66fEhKLl8yrw6jrmMkCLs_CeIosg&s"
+                alt="">
+            <div class="logo">LOGO</div>
+        </div>
+        <div class="mid">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#article">Features</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us Now</button><button class="btn">Email Us</button>
+        </div>
+    </div>
+
+    <div id="header">
+        <div class="header-left">
+            <h1>Once you try it, you will love it.</h1>
+            <h4>Come with your family & friends and enjoy delicious food.</h4>
+        </div>
+        <div class="header-right">
+            <img src="https://www.fareastmalls.com.sg/-/media/Project/RBG/shared/WSQ-ARTICLE/In-article-visuals11.png"
+                alt="">
+        </div>
+    </div>
+
+    <div id="article">
+        <div class="features" id="feature1">
+            <img src="https://cdn.pixabay.com/photo/2013/07/12/13/48/table-147314__340.png" alt="">
+            <p>Reservations</p>
+        </div>
+        <div class="features" id="feature2">
+            <img src="https://cdn.pixabay.com/photo/2017/09/04/23/44/table-2715994__340.png" alt="">
+            <p>Organised System</p>
+        </div>
+        <div class="features" id="feature3">
+            <img src="https://cdn.pixabay.com/photo/2014/03/24/17/16/dishes-295282__340.png" alt="">
+            <p>Amazing Food</p>
+        </div>
+        <div class="features" id="feature4">
+            <img src="https://cdn.pixabay.com/photo/2014/04/03/00/42/chef-hat-309146__340.png" alt="">
+            <p>Skilled Chefs</p>
+        </div>
+        <div class="features" id="feature5">
+            <img src="https://cdn.pixabay.com/photo/2017/11/20/01/06/coffee-2964147__340.png" alt="">
+            <p>Delicious Coffee</p>
+        </div>
+        <div class="features" id="feature6">
+            <img src="https://cdn.pixabay.com/photo/2014/04/02/10/26/beer-303856__340.png" alt="">
+            <p>Soft Drinks</p>
+        </div>
+    </div>
+
+    <script>
+        let nav = document.getElementById('navbar');
+        let logo = document.getElementsByClassName('left');
+        logo[0].addEventListener('click', function run() {
+            if (nav.style.backgroundColor != 'black') nav.style.backgroundColor = 'black';
+            else nav.style.backgroundColor = '#2a2a2a';
+        });
+
+        let btn = document.getElementsByClassName('btn');
+        btn[0].addEventListener('click', function run() {
+            alert("Call At +91-9345685241 \nThank You");
+        });
+        btn[1].addEventListener('click', function run() {
+            alert("Email at \t restaurant3234@gmail.com \nThank You");
+        });
+
+        for (i = 0; i < document.querySelectorAll(".features").length; i++) {
+            document.querySelectorAll(".features")[i].addEventListener('click', () => {
+                alert("Contact +91-9345685241 for more information \nThank You");
+            })
+        }
+    </script>
+</body>
+
+</html>
